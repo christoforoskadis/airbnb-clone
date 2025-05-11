@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb Clone | Vacation rentals, cabins, beach houses, & more</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-[Montserrat]">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white border-b z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+<div class="flex-shrink-0">
+                    <a href="/" class="text-[#FF385C] text-xl font-bold">
+                        <svg width="102" height="32" style="display: block">
+                            <path d="M29.3864 22.7101C29.2429 22.3073 29.0752 21.9176 28.9157 21.5565C28.6701 21.0011 28.4129 20.4446 28.1641 19.9067L28.1444 19.864C25.9255 15.0589 23.5439 10.1881 21.0659 5.38701L20.9607 5.18316C20.7079 4.69289 20.4466 4.18596 20.1784 3.68786C19.8604 3.0575 19.4745 2.4636 19.0276 1.91668C18.5245 1.31651 17.8956 0.833822 17.1853 0.502654C16.475 0.171486 15.7005 -9.83959e-05 14.9165 4.23317e-08C14.1325 9.84805e-05 13.3581 0.171877 12.6478 0.503224C11.9376 0.834571 11.3088 1.31742 10.8059 1.91771C10.3595 2.46476 9.97383 3.05853 9.65572 3.68858C9.38521 4.19115 9.12145 4.70278 8.8664 5.19757L8.76872 5.38696C6.29061 10.1884 3.90903 15.0592 1.69015 19.8639L1.65782 19.9338C1.41334 20.463 1.16057 21.0102 0.919073 21.5563C0.75949 21.9171 0.592009 22.3065 0.448355 22.7103C0.0369063 23.8104 -0.094204 24.9953 0.0668098 26.1585C0.237562 27.334 0.713008 28.4447 1.44606 29.3804C2.17911 30.3161 3.14434 31.0444 4.24614 31.4932C5.07835 31.8299 5.96818 32.002 6.86616 32C7.14824 31.9999 7.43008 31.9835 7.71027 31.9509C8.846 31.8062 9.94136 31.4366 10.9321 30.8639C12.2317 30.1338 13.5152 29.0638 14.9173 27.5348C16.3194 29.0638 17.6029 30.1338 18.9025 30.8639C19.8932 31.4367 20.9886 31.8062 22.1243 31.9509C22.4045 31.9835 22.6864 31.9999 22.9685 32C23.8664 32.002 24.7561 31.8299 25.5883 31.4932C26.6901 31.0444 27.6554 30.3161 28.3885 29.3804C29.1216 28.4447 29.5971 27.3341 29.7679 26.1585C29.9287 24.9952 29.7976 23.8103 29.3864 22.7101ZM14.9173 24.377C13.1816 22.1769 12.0678 20.1338 11.677 18.421C11.5169 17.7792 11.4791 17.1131 11.5656 16.4573C11.6339 15.9766 11.8105 15.5176 12.0821 15.1148C12.4163 14.6814 12.8458 14.3304 13.3374 14.0889C13.829 13.8475 14.3696 13.7219 14.9175 13.7219C15.4655 13.7219 16.006 13.8475 16.4976 14.0889C16.9892 14.3304 17.4187 14.6814 17.7529 15.1148C18.0245 15.5176 18.2011 15.9766 18.2694 16.4573C18.3559 17.1131 18.3181 17.7792 18.158 18.421C17.7672 20.1338 16.6534 22.1769 14.9173 24.377ZM27.7406 25.8689C27.6212 26.6908 27.2887 27.4674 26.7762 28.1216C26.2636 28.7759 25.5887 29.2852 24.8183 29.599C24.0393 29.9111 23.1939 30.0217 22.3607 29.9205C21.4946 29.8089 20.6599 29.5239 19.9069 29.0824C18.7501 28.4325 17.5791 27.4348 16.2614 25.9712C18.3591 23.3846 19.669 21.0005 20.154 18.877C20.3723 17.984 20.4196 17.0579 20.2935 16.1475C20.1791 15.3632 19.8879 14.615 19.4419 13.9593C18.9194 13.2519 18.2378 12.6768 17.452 12.2805C16.6661 11.8842 15.798 11.6777 14.9175 11.6777C14.0371 11.6777 13.1689 11.8842 12.383 12.2805C11.5971 12.6768 10.9155 13.2519 10.393 13.9593C9.94707 14.615 9.65591 15.3632 9.54146 16.1475C9.41536 17.0579 9.46271 17.984 9.68098 18.877C10.1659 21.0005 11.4758 23.3846 13.5735 25.9712C12.2559 27.4348 11.0849 28.4325 9.92806 29.0824C9.17510 29.5239 8.34046 29.8089 7.47434 29.9205C6.64114 30.0217 5.79574 29.9111 5.01669 29.599C4.24631 29.2852 3.57147 28.7759 3.05892 28.1216C2.54638 27.4674 2.21395 26.6908 2.09449 25.8689C1.97507 24.9859 2.07161 24.0892 2.37148 23.2507C2.49392 22.8915 2.64767 22.5433 2.83168 22.2081C3.02762 21.8207 3.23591 21.4174 3.45007 21.0011L3.49652 20.9302C5.71263 16.1239 8.09838 11.2391 10.5788 6.41817L10.6754 6.24183C10.9251 5.76207 11.173 5.27239 11.4206 4.79085C11.6681 4.31351 11.9303 3.84057 12.2327 3.38798C12.5126 2.97207 12.8708 2.62299 13.2872 2.36245C13.7168 2.09061 14.2004 1.94677 14.6972 1.94677C15.1939 1.94677 15.6775 2.09061 16.1071 2.36245C16.5235 2.62299 16.8817 2.97207 17.1616 3.38798C17.464 3.84057 17.7262 4.31351 17.9737 4.79085C18.2213 5.27239 18.4692 5.76207 18.7189 6.24183L18.8155 6.41817C21.2959 11.2391 23.6817 16.1239 25.8978 20.9302L25.9442 21.0011C26.1584 21.4174 26.3667 21.8207 26.5626 22.2081C26.7466 22.5433 26.9004 22.8915 27.0228 23.2507C27.3227 24.0892 27.4192 24.9859 27.2998 25.8689Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                        <path d="M41.6847 24.1196C40.8856 24.1196 40.1505 23.9594 39.4792 23.6391C38.808 23.3188 38.2327 22.8703 37.7533 22.2937C37.274 21.7172 36.9068 21.0445 36.6518 20.2757C36.3967 19.5069 36.2692 18.6762 36.2692 17.7836V17.7182C36.2692 16.8258 36.3967 15.9951 36.6518 15.2263C36.9068 14.4575 37.274 13.7848 37.7533 13.2082C38.2327 12.6317 38.808 12.1832 39.4792 11.8629C40.1505 11.5426 40.8856 11.3824 41.6847 11.3824C42.4838 11.3824 43.2189 11.5426 43.8901 11.8629C44.5614 12.1832 45.1367 12.6317 45.616 13.2082C46.0954 13.7848 46.4626 14.4575 46.7176 15.2263C46.9727 15.9951 47.1002 16.8258 47.1002 17.7182V17.7836C47.1002 18.6762 46.9727 19.5069 46.7176 20.2757C46.4626 21.0445 46.0954 21.7172 45.616 22.2937C45.1367 22.8703 44.5614 23.3188 43.8901 23.6391C43.2189 23.9594 42.4838 24.1196 41.6847 24.1196ZM41.6847 22.7334C42.2204 22.7334 42.7124 22.6143 43.1609 22.3761C43.6093 22.138 43.9947 21.8135 44.317 21.4028C44.6393 20.9921 44.8917 20.5161 45.0741 19.9748C45.2565 19.4334 45.3477 18.8529 45.3477 18.2333V18.1678C45.3477 17.5483 45.2565 16.9678 45.0741 16.4265C44.8917 15.8851 44.6393 15.4091 44.317 14.9984C43.9947 14.5877 43.6093 14.2632 43.1609 14.0251C42.7124 13.7869 42.2204 13.6678 41.6847 13.6678C41.149 13.6678 40.657 13.7869 40.2085 14.0251C39.7601 14.2632 39.3747 14.5877 39.0524 14.9984C38.7301 15.4091 38.4777 15.8851 38.2953 16.4265C38.1129 16.9678 38.0217 17.5483 38.0217 18.1678V18.2333C38.0217 18.8529 38.1129 19.4334 38.2953 19.9748C38.4777 20.5161 38.7301 20.9921 39.0524 21.4028C39.3747 21.8135 39.7601 22.138 40.2085 22.3761C40.657 22.6143 41.149 22.7334 41.6847 22.7334Z"/>
+                        <path d="M52.7292 24.1196C51.7809 24.1196 50.8672 23.9332 49.9881 23.5604C49.1089 23.1876 48.3425 22.6092 47.6888 21.8252L48.8282 20.5943C49.4322 21.2599 50.0726 21.7672 50.7493 22.1163C51.4261 22.4653 52.1374 22.6398 52.8833 22.6398C53.629 22.6398 54.2058 22.4903 54.6134 22.1914C55.0211 21.8925 55.2249 21.5153 55.2249 21.0599V21.0272C55.2249 20.7284 55.1446 20.4732 54.984 20.2615C54.8233 20.0499 54.5923 19.8709 54.2911 19.7246C53.9898 19.5783 53.6239 19.4538 53.1936 19.3511C52.7632 19.2483 52.2893 19.1347 51.7718 19.0101C51.1852 18.8748 50.6349 18.7231 50.1209 18.5549C49.6069 18.3867 49.1547 18.1696 48.7643 17.9034C48.3738 17.6372 48.0671 17.3111 47.8442 16.925C47.6213 16.5389 47.5098 16.0671 47.5098 15.5094V15.4767C47.5098 14.9628 47.6213 14.4816 47.8442 14.0332C48.0671 13.5847 48.3738 13.1908 48.7643 12.8514C49.1547 12.5121 49.6178 12.2459 50.1536 12.0532C50.6894 11.8604 51.2761 11.764 51.9137 11.764C52.9165 11.764 53.8138 11.9396 54.6057 12.2895C55.3976 12.6395 56.0961 13.1307 56.7011 13.7632L55.6399 15.0596C55.1333 14.5348 54.6057 14.1293 54.0573 13.8431C53.5089 13.5569 52.7632 13.4138 51.8204 13.4138C51.1209 13.4138 50.5669 13.5569 50.1591 13.8431C49.7515 14.1293 49.5477 14.4847 49.5477 14.9092V14.9419C49.5477 15.2626 49.6342 15.5286 49.8076 15.7403C49.9809 15.9519 50.2182 16.1309 50.5195 16.2772C50.8207 16.4235 51.1852 16.548 51.6155 16.6507C52.0459 16.7535 52.5198 16.8671 53.0373 16.9917C53.6239 17.127 54.1742 17.2842 54.6882 17.4633C55.2022 17.6424 55.6544 17.8704 56.0449 18.1475C56.4353 18.4246 56.742 18.7616 56.9649 19.1585C57.1878 19.5555 57.2993 20.0381 57.2993 20.6067V20.6394C57.2993 21.1969 57.1878 21.7063 56.9649 22.1674C56.742 22.6285 56.4353 23.0279 56.0449 23.3672C55.6544 23.7066 55.1852 23.9673 54.6366 24.1492C54.0881 24.3295 53.4469 24.1196 52.7292 24.1196Z"/>
+                        <path d="M63.8314 24.1196C62.8831 24.1196 61.9693 23.9332 61.0902 23.5604C60.2111 23.1876 59.4447 22.6092 58.791 21.8252L59.9304 20.5943C60.5344 21.2599 61.1748 21.7672 61.8515 22.1163C62.5283 22.4653 63.2396 22.6398 63.9855 22.6398C64.7313 22.6398 65.308 22.4903 65.7157 22.1914C66.1233 21.8925 66.3271 21.5153 66.3271 21.0599V21.0272C66.3271 20.7284 66.2468 20.4732 66.0862 20.2615C65.9255 20.0499 65.6945 19.8709 65.3933 19.7246C65.092 19.5783 64.7261 19.4538 64.2958 19.3511C63.8654 19.2483 63.3915 19.1347 62.874 19.0101C62.2874 18.8748 61.7371 18.7231 61.2231 18.5549C60.7091 18.3867 60.2569 18.1696 59.8665 17.9034C59.476 17.6372 59.1693 17.3111 58.9464 16.925C58.7235 16.5389 58.612 16.0671 58.612 15.5094V15.4767C58.612 14.9628 58.7235 14.4816 58.9464 14.0332C59.1693 13.5847 59.476 13.1908 59.8665 12.8514C60.2569 12.5121 60.72 12.2459 61.2558 12.0532C61.7916 11.8604 62.3783 11.764 63.0159 11.764C64.0187 11.764 64.916 11.9396 65.7079 12.2895C66.4998 12.6395 67.1983 13.1307 67.8033 13.7632L66.7421 15.0596C66.2355 14.5348 65.7079 14.1293 65.1595 13.8431C64.6111 13.5569 63.8654 13.4138 62.9226 13.4138C62.2231 13.4138 61.6691 13.5569 61.2613 13.8431C60.8537 14.1293 60.6499 14.4847 60.6499 14.9092V14.9419C60.6499 15.2626 60.7364 15.5286 60.9098 15.7403C61.0831 15.9519 61.3204 16.1309 61.6217 16.2772C61.9229 16.4235 62.2874 16.548 62.7177 16.6507C63.1481 16.7535 63.622 16.8671 64.1395 16.9917C64.7261 17.127 65.2764 17.2842 65.7904 17.4633C66.3044 17.6424 66.7566 17.8704 67.1471 18.1475C67.5375 18.4246 67.8442 18.7616 68.0671 19.1585C68.29 19.5555 68.4015 20.0381 68.4015 20.6067V20.6394C68.4015 21.1969 68.29 21.7063 68.0671 22.1674C67.8442 22.6285 67.5375 23.0279 67.1471 23.3672C66.7566 23.7066 66.2874 23.9673 65.7388 24.1492C65.1903 24.3295 64.5491 24.1196 63.8314 24.1196Z"/>
+                        <path d="M73.0755 24.0215H71.0922V11.8621H73.0755V24.0215Z"/>
+                        <path d="M79.6289 24.1196C78.8298 24.1196 78.0947 23.9594 77.4235 23.6391C76.7522 23.3188 76.1769 22.8703 75.6975 22.2937C75.2182 21.7172 74.851 21.0445 74.596 20.2757C74.3409 19.5069 74.2134 18.6762 74.2134 17.7836V17.7182C74.2134 16.8258 74.3409 15.9951 74.596 15.2263C74.851 14.4575 75.2182 13.7848 75.6975 13.2082C76.1769 12.6317 76.7522 12.1832 77.4235 11.8629C78.0947 11.5426 78.8298 11.3824 79.6289 11.3824C80.428 11.3824 81.1631 11.5426 81.8344 11.8629C82.5056 12.1832 83.0809 12.6317 83.5603 13.2082C84.0396 13.7848 84.4068 14.4575 84.6619 15.2263C84.9169 15.9951 85.0444 16.8258 85.0444 17.7182V17.7836C85.0444 18.6762 84.9169 19.5069 84.6619 20.2757C84.4068 21.0445 84.0396 21.7172 83.5603 22.2937C83.0809 22.8703 82.5056 23.3188 81.8344 23.6391C81.1631 23.9594 80.428 24.1196 79.6289 24.1196ZM79.6289 22.7334C80.1646 22.7334 80.6566 22.6143 81.1051 22.3761C81.5535 22.138 81.9389 21.8135 82.2612 21.4028C82.5835 20.9921 82.8359 20.5161 83.0183 19.9748C83.2007 19.4334 83.2919 18.8529 83.2919 18.2333V18.1678C83.2919 17.5483 83.2007 16.9678 83.0183 16.4265C82.8359 15.8851 82.5835 15.4091 82.2612 14.9984C81.9389 14.5877 81.5535 14.2632 81.1051 14.0251C80.6566 13.7869 80.1646 13.6678 79.6289 13.6678C79.0932 13.6678 78.6012 13.7869 78.1528 14.0251C77.7043 14.2632 77.3189 14.5877 76.9966 14.9984C76.6743 15.4091 76.4219 15.8851 76.2395 16.4265C76.0571 16.9678 75.9659 17.5483 75.9659 18.1678V18.2333C75.9659 18.8529 76.0571 19.4334 76.2395 19.9748C76.4219 20.5161 76.6743 20.9921 76.9966 21.4028C77.3189 21.8135 77.7043 22.138 78.1528 22.3761C78.6012 22.6143 79.0932 22.7334 79.6289 22.7334Z"/>
+                        <path d="M89.9484 24.0215H88.0333V11.8621H89.9484L95.3049 20.5289H95.3703V11.8621H97.2854V24.0215H95.3703L89.9484 15.2263H89.883V24.0215Z"/>
+                    </svg>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-500 hover:text-gray-900">Places to stay</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900">Experiences</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900">Online Experiences</a>
+                </div>
+
+                <!-- Right Side Navigation -->
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-gray-500 hover:text-gray-900">Become a Host</a>
+                    <button class="p-2 hover:bg-gray-100 rounded-full">
+                        <i class="fas fa-globe text-gray-500"></i>
+                    </button>
+                    <div class="flex items-center border rounded-full p-2 hover:shadow-md cursor-pointer">
+                        <i class="fas fa-bars text-gray-500 mx-2"></i>
+                        <i class="fas fa-user-circle text-gray-500 text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Section -->
+    <div class="pt-24 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-center mt-4">
+                <div class="flex items-center space-x-4 p-2 border rounded-full shadow-lg hover:shadow-xl transition-shadow duration-200 w-full max-w-xl bg-white">
+                    <div class="flex-1 px-4">
+                        <div class="font-medium">Location</div>
+                        <input type="text" placeholder="Where are you going?" class="w-full focus:outline-none">
+                    </div>
+                    <div class="h-8 w-px bg-gray-300"></div>
+                    <div class="flex-1 px-4">
+                        <div class="font-medium">Check in</div>
+                        <input type="text" placeholder="Add dates" class="w-full focus:outline-none">
+                    </div>
+                    <div class="h-8 w-px bg-gray-300"></div>
+                    <div class="flex-1 px-4">
+                        <div class="font-medium">Check out</div>
+                        <input type="text" placeholder="Add dates" class="w-full focus:outline-none">
+                    </div>
+                    <div class="h-8 w-px bg-gray-300"></div>
+                    <div class="flex-1 px-4">
+                        <div class="font-medium">Guests</div>
+                        <input type="text" placeholder="Add guests" class="w-full focus:outline-none">
+                    </div>
+                    <button class="bg-[#FF385C] text-white p-3 rounded-full hover:bg-[#DE1162] transition-colors">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories Section -->
+    <div class="border-t">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex space-x-8 overflow-x-auto hide-scrollbar">
+                <div class="flex flex-col items-center space-y-2 min-w-[56px]">
+                    <div class="w-6 h-6 flex items-center justify-center">
+                        <i class="fas fa-home text-gray-500"></i>
+                    </div>
+                    <span class="text-xs text-gray-500">Amazing views</span>
+                </div>
+                <div class="flex flex-col items-center space-y-2 min-w-[56px]">
+                    <div class="w-6 h-6 flex items-center justify-center">
+                        <i class="fas fa-umbrella-beach text-gray-500"></i>
+                    </div>
+                    <span class="text-xs text-gray-500">Beach</span>
+                </div>
+                <div class="flex flex-col items-center space-y-2 min-w-[56px]">
+                    <div class="w-6 h-6 flex items-center justify-center">
+                        <i class="fas fa-mountain text-gray-500"></i>
+                    </div>
+                    <span class="text-xs text-gray-500">Mountains</span>
+                </div>
+                <div class="flex flex-col items-center space-y-2 min-w-[56px]">
+                    <div class="w-6 h-6 flex items-center justify-center">
+                        <i class="fas fa-swimming-pool text-gray-500"></i>
+                    </div>
+                    <span class="text-xs text-gray-500">Pools</span>
+                </div>
+                <div class="flex flex-col items-center space-y-2 min-w-[56px]">
+                    <div class="w-6 h-6 flex items-center justify-center">
+                        <i class="fas fa-campground text-gray-500"></i>
+                    </div>
+                    <span class="text-xs text-gray-500">Camping</span>
+                </div>
+                <div class="flex flex-col items-center space-y-2 min-w-[56px]">
+                    <div class="w-6 h-6 flex items-center justify-center">
+                        <i class="fas fa-snowflake text-gray-500"></i>
+                    </div>
+                    <span class="text-xs text-gray-500">Arctic</span>
+                </div>
+                <div class="flex flex-col items-center space-y-2 min-w-[56px]">
+                    <div class="w-6 h-6 flex items-center justify-center">
+                        <i class="fas fa-city text-gray-500"></i>
+                    </div>
+                    <span class="text-xs text-gray-500">Cities</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Property Listings -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Property Card 1 -->
+            <div class="property-card rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg" alt="Luxury villa" class="w-full h-64 object-cover">
+                    <button class="absolute top-4 right-4 text-gray-800 hover:text-red-500">
+                        <i class="far fa-heart text-xl"></i>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">Luxury Villa with Pool</h3>
+                            <p class="text-gray-500">Bali, Indonesia</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <span class="ml-1">4.9</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 mt-2">Available next week</p>
+                    <p class="mt-2"><span class="font-semibold">$350</span> / night</p>
+                </div>
+            </div>
+
+            <!-- Property Card 2 -->
+            <div class="property-card rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/2351649/pexels-photo-2351649.jpeg" alt="Mountain cabin" class="w-full h-64 object-cover">
+                    <button class="absolute top-4 right-4 text-gray-800 hover:text-red-500">
+                        <i class="far fa-heart text-xl"></i>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">Mountain Cabin</h3>
+                            <p class="text-gray-500">Swiss Alps</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <span class="ml-1">4.8</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 mt-2">Available now</p>
+                    <p class="mt-2"><span class="font-semibold">$280</span> / night</p>
+                </div>
+            </div>
+
+            <!-- Property Card 3 -->
+            <div class="property-card rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg" alt="Beach house" class="w-full h-64 object-cover">
+                    <button class="absolute top-4 right-4 text-gray-800 hover:text-red-500">
+                        <i class="far fa-heart text-xl"></i>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">Beachfront House</h3>
+                            <p class="text-gray-500">Malibu, USA</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <span class="ml-1">4.7</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 mt-2">Available next month</p>
+                    <p class="mt-2"><span class="font-semibold">$500</span> / night</p>
+                </div>
+            </div>
+
+            <!-- Property Card 4 -->
+            <div class="property-card rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg" alt="City apartment" class="w-full h-64 object-cover">
+                    <button class="absolute top-4 right-4 text-gray-800 hover:text-red-500">
+                        <i class="far fa-heart text-xl"></i>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">Modern City Apartment</h3>
+                            <p class="text-gray-500">Paris, France</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <span class="ml-1">4.6</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 mt-2">Available tomorrow</p>
+                    <p class="mt-2"><span class="font-semibold">$200</span> / night</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-500 hover:text-gray-900">Help Center</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-gray-900">Safety information</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-gray-900">Cancellation options</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Community</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-500 hover:text-gray-900">Airbnb.org</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-gray-900">Support refugees</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-gray-900">Combat discrimination</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Hosting</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-500 hover:text-gray-900">Try hosting</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-gray-900">AirCover: protection for Hosts</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-gray-900">Explore hosting resources</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Airbnb</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-500 hover:text-gray-900">Newsroom</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-gray-900">Learn about new features</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-gray-900">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-500 hover:text-gray-900">© 2023 Airbnb, Inc.</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900">Privacy</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900">Terms</a>
+                </div>
+                <div class="flex items-center space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
